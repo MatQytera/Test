@@ -13,8 +13,11 @@ import java.util.concurrent.TimeUnit;
 public class PG1
 {
     public WebDriver driver;
-    public String baseUrl = "https://www.lambdatest.com/";
+    public String baseUrl = "http://192.168.178.120:8081/app/index.html";
 
+    
+    
+    
     @Test
     public void test1() {
 
@@ -28,6 +31,9 @@ public class PG1
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
+        
+        
+        
         driver.close();
     }
 }
