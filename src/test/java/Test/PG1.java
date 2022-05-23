@@ -39,6 +39,7 @@ public class PG1
         driver.findElement(emailaddressefield).sendKeys(email);
         driver.findElement(passwordfield).sendKeys(password);       
         driver.findElement(submit).click();
+        driver.close();
     }
     
     
