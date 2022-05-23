@@ -36,29 +36,11 @@ public class PG1
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
-        
-               
-       
-    }
-    
-    @Test
-    public void emailAddressInsert(){
         driver.findElement(emailaddressefield).sendKeys(email);
-
-    }
-
-    @Test
-    public void passwordInsert(){
-        driver.findElement(passwordfield).sendKeys(password);
-    }
-    
-    @Test
-    public void submitClick() {
-
-       // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(testautomatisation));
+        driver.findElement(passwordfield).sendKeys(password);       
         driver.findElement(submit).click();
     }
+    
+    
     
 }
