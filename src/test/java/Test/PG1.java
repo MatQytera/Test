@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class PG1
 {
     public WebDriver driver;
-    public String baseUrl = "http://192.168.178.120:8081/app/index.html";
+    public String baseUrl = "https://www.lambdatest.com/";
 
     public static final By emailaddressefield = By.xpath("//input[@id='exampleInputEmail1']");
     String email =  "jane.doe";
@@ -36,9 +36,9 @@ public class PG1
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
-        driver.findElement(emailaddressefield).sendKeys(email);
+       /* driver.findElement(emailaddressefield).sendKeys(email);
         driver.findElement(passwordfield).sendKeys(password);       
-        driver.findElement(submit).click();
+        driver.findElement(submit).click();*/
         driver.close();
     }
     
