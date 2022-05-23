@@ -26,18 +26,24 @@ public class PG1
     @Test
     public void test1() {
 
+        
+        ChromeOptions handlingSSL = new ChromeOptions();
+        handlingSSL.setAcceptInsecureCerts(true);
+
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
+        /*options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+        options.addArguments("--ignore-certificate-errors");*/
+        driver = new ChromeDriver(handlingSSL);
 
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
-       /* driver.findElement(emailaddressefield).sendKeys(email);
-        driver.findElement(passwordfield).sendKeys(password);       
+        /*driver.findElement(emailaddressefield).sendKeys(email);
+        driver.findElement(passwordfield).sendKeys(password);
         driver.findElement(submit).click();*/
         driver.close();
     }
