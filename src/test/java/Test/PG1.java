@@ -14,35 +14,22 @@ import java.util.concurrent.TimeUnit;
 
 public class PG1
 {
-    private WebDriver driver;
-    @BeforeClass
-    public void setUp()
-    {
+    public WebDriver driver;
+    public String baseUrl = "https://www.lambdatest.com/";
+
+    @Test
+    public void test1() {
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        driver.navigate().to("https://www.google.com");
+
+        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
-    }
-    @Test
-    public void userLogin()
-    {
-        WebElement searchTxt = driver.findElement(By.name("q"));
-        searchTxt.sendKeys("automation");
-        WebElement submitBtn = driver.findElement(By.name("btnK"));
-        submitBtn.click();
-        System.out.println("Current URL is:" + driver.getCurrentUrl());
-        Assert.assertTrue(driver.getTitle().contains("automation - Google Search"));
-        System.out.println("Current Title is:" + driver.getTitle());
-    }
-    @AfterClass
-    public void tearDown(){
-        if (driver != null) {
-            driver.quit();
-        }
+        driver.get(baseUrl);
+        driver.close();
     }
 }
