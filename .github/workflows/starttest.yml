@@ -35,14 +35,11 @@ jobs:
       with:
         java-version: 1.8
     - name: Test with Maven
-      run: mvn -B package --file pom.xml test 
-  report: 
-     runs-on: ubuntu-latest
-     steps:  
-     - name: Publish Test Results
-       uses: EnricoMi/publish-unit-test-result-action@v1
-       if: always()
-       with:
-        files: "test-results/**/*.xml"
+      run: mvn -B package --file pom.xml test   
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      if: always()
+      with:
+       files: "test-results/**/*.xml"
     
      
