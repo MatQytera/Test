@@ -32,4 +32,4 @@ jobs:
       with:
         java-version: 11
     - name: Test with Maven
-      run: mvn exec:java -Dexec.mainClass="test.PG1"
+      run: mvn exec:java -Dexec.mainClass="Test.PG1"
