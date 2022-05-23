@@ -35,13 +35,14 @@ jobs:
       with:
         java-version: 1.8
     - name: Test with Maven
-      run: mvn -B package --file pom.xml test       
-    - name: Report
-      uses: dorny/test-reporter@v1
-      if: always()
-      with:
-        name: Maven Tests
-        path: target/surefire-reports/*.xml
-        reporter: java-junit
-        fail-on-error: true
+      run: mvn -B package --file pom.xml test 
+  report: 
+     runs-on: ubuntu-latest
+     steps:  
+     - name: Publish Test Results
+       uses: EnricoMi/publish-unit-test-result-action@v1
+       if: always()
+       with:
+        files: "test-results/**/*.xml"
     
+     
