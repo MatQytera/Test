@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class AppTest 
+public class PG1 
 { 
 	public WebDriver driver; 
 	public String baseUrl = "https://www.lambdatest.com/";  
