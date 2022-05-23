@@ -33,7 +33,7 @@ public class PG1
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
 
-        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseUrl);
         driver.findElement(emailaddressefield).sendKeys(email);
