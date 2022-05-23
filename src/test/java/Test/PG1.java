@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Test;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeUnit
+
 
 public class PG1
 {
