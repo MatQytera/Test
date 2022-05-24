@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
-
+import java.lang.Thread;  
 
 public class QLoadPO
 {
@@ -47,7 +47,9 @@ public class QLoadPO
         driver.findElement(passwordfield).sendKeys(password);
         driver.findElement(submit).click();
         //driver.close();
-        
+        //"//input[@id='resourceFiles']"
+        //"//input[@id='jmeterProjectFile']"
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//input[@id='jmeterProjectFile']")).sendKeys((System.getProperty("user.dir") + "/src/main/resources/uploaddata/example-project.jmx"));
         driver.findElement(By.xpath("//input[@id='resourceFiles']")).sendKeys((System.getProperty("user.dir") + "/src/main/resources/uploaddata/4cee28e5new-Kopie.jpg"));
         driver.findElement(submit).click();
