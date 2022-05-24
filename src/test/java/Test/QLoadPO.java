@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 import java.lang.Thread;  
 
-public class QLoadPO extends Thread
+public class QLoadPO 
 {
     public WebDriver driver;
     //public String baseUrl = "http://192.168.178.120:8081/app/index.html";
@@ -25,7 +25,7 @@ public class QLoadPO extends Thread
     public static final By submit = By.xpath("//button[@type='submit']");
     
     @Test
-    public void goToRootPage() {
+    public void goToRootPage() throws InterruptedException {
 
         
         ChromeOptions handlingSSL = new ChromeOptions();
