@@ -46,7 +46,7 @@ public class QLoadPO
         /*driver.findElement(emailaddressefield).sendKeys(email);
         driver.findElement(passwordfield).sendKeys(password);
         driver.findElement(submit).click();*/
-        driver.close();
+        //driver.close();
     }
     
     
@@ -56,7 +56,7 @@ public class QLoadPO
     }
     
     @Test
-    public void passwordInsert(){{
+    public void passwordInsert(){
         driver.findElement(passwordfield).sendKeys(password);
     }
     
