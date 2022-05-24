@@ -15,7 +15,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn -Dtest=PG1 test
+      run: mvn -Dtest=QLoadPO test
         
     
  
