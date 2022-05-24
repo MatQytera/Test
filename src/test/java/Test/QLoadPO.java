@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 import java.lang.Thread;  
 
-public class QLoadPO
+public class QLoadPO extends Thread
 {
     public WebDriver driver;
     //public String baseUrl = "http://192.168.178.120:8081/app/index.html";
