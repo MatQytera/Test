@@ -34,11 +34,11 @@ public class PG1
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        /*options.addArguments("--no-sandbox");
+        options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-        options.addArguments("--ignore-certificate-errors");*/
-        driver = new ChromeDriver(handlingSSL);
+        options.addArguments("--ignore-certificate-errors");
+        driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
