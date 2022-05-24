@@ -52,7 +52,7 @@ public class QLoadPO
     
     @Test
     public void emailAddressInsert(){
-       driver.findElement(emailaddressefield).sendKeys(email)
+       driver.findElement(emailaddressefield).sendKeys(email);
     }
     
     @Test
@@ -62,8 +62,6 @@ public class QLoadPO
     
     @Test                             
     public void submitClick() {
-
-      
         driver.findElement(submit).click();
     }
     
