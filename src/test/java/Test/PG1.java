@@ -38,7 +38,7 @@ public class PG1
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         options.addArguments("--ignore-certificate-errors");*/
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(handlingSSL);
 
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
