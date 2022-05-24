@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 
-public class PG1
+public class QLoadPO
 {
     public WebDriver driver;
     //public String baseUrl = "http://192.168.178.120:8081/app/index.html";
@@ -25,7 +25,7 @@ public class PG1
     public static final By submit = By.xpath("//button[@type='submit']");
     
     @Test
-    public void test1() {
+    public void goToRootPage() {
 
         
         ChromeOptions handlingSSL = new ChromeOptions();
@@ -40,7 +40,7 @@ public class PG1
         options.addArguments("--ignore-certificate-errors");
         driver = new ChromeDriver(options);
 
-        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+       
         driver.manage().window().maximize();
         driver.get(baseUrl);
         /*driver.findElement(emailaddressefield).sendKeys(email);
@@ -50,5 +50,21 @@ public class PG1
     }
     
     
+    @Test
+    public void emailAddressInsert(){
+       driver.findElement(emailaddressefield).sendKeys(email)
+    }
+    
+    @Test
+    public void passwordInsert(){{
+        driver.findElement(passwordfield).sendKeys(password);
+    }
+    
+    @Test                             
+    public void submitClick() {
+
+      
+        driver.findElement(submit).click();
+    }
     
 }
