@@ -43,26 +43,12 @@ public class QLoadPO
        
         driver.manage().window().maximize();
         driver.get(baseUrl);
-        /*driver.findElement(emailaddressefield).sendKeys(email);
+        driver.findElement(emailaddressefield).sendKeys(email);
         driver.findElement(passwordfield).sendKeys(password);
-        driver.findElement(submit).click();*/
+        driver.findElement(submit).click();
         //driver.close();
     }
     
     
-    @Test
-    public void emailAddressInsert(){
-       driver.findElement(emailaddressefield).sendKeys(email);
-    }
-    
-    @Test
-    public void passwordInsert(){
-        driver.findElement(passwordfield).sendKeys(password);
-    }
-    
-    @Test                             
-    public void submitClick() {
-        driver.findElement(submit).click();
-    }
     
 }
