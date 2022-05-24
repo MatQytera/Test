@@ -48,8 +48,8 @@ public class QLoadPO
         driver.findElement(submit).click();
         //driver.close();
         
-        driver.findElement(By.xpath("//input[@id='jmeterProjectFile']")).sendKeys((System.getProperty("user.dir") + "\\src\\main\\resources\\uploaddata\\example-project.jmx"));
-        driver.findElement(By.xpath("//input[@id='resourceFiles']")).sendKeys((System.getProperty("user.dir") + "\\src\\main\\resources\\uploaddata\\4cee28e5new-Kopie.jpg"));
+        driver.findElement(By.xpath("//input[@id='jmeterProjectFile']")).sendKeys((System.getProperty("user.dir") + "/src/main/resources/uploaddata/example-project.jmx"));
+        driver.findElement(By.xpath("//input[@id='resourceFiles']")).sendKeys((System.getProperty("user.dir") + "/src/main/resources/uploaddata/4cee28e5new-Kopie.jpg"));
         driver.findElement(submit).click();
         
         
@@ -58,3 +58,4 @@ public class QLoadPO
     
     
 }
+7
