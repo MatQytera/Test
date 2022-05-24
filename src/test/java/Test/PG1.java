@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 public class PG1
 {
     public WebDriver driver;
-    public String baseUrl = "http://192.168.178.120:8081/app/index.html";
+    //public String baseUrl = "http://192.168.178.120:8081/app/index.html";
+    public String baseUrl = "https://www.qytera.de/";
 
     public static final By emailaddressefield = By.xpath("//input[@id='exampleInputEmail1']");
     String email =  "jane.doe";
