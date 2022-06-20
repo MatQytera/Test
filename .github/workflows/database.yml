@@ -29,9 +29,10 @@ jobs:
 
     steps:
       - name: Update system
-        run: |
+        run: |         
           sudo apt update
-          sudo apt upgrade -y    
+          sudo apt upgrade -y 
+          sudo apt install nodejs npm
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
         uses: actions/checkout@v3
