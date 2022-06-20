@@ -16,13 +16,16 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: password
         options: >-
-          --health-cmd="mysqladmin ping" 
-          --health-interval=10s
-          --health-timeout=5s 
-          --health-retries=5
+          --health-cmd="mysqladmin ping" --health-interval=10s
+          --health-timeout=5s --health-retries=5
     steps:
       - name: Verify MySQL connection from container
         run: |
           apt-get update
           apt-get install -y mysql-client
           mysql --host mydb -uroot -ppassword -e "SHOW DATABASES"
+      - name: Setup Runner Database
+        run: >
+          mysql -uroot -h127.0.0.1 -proot -e 'CREATE DATABASE IF NOT EXISTS
+          db1;'
+
