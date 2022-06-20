@@ -41,9 +41,11 @@ jobs:
       # For more information, see https://docs.npmjs.com/cli/ci.html
       - name: Install dependencies
         run: |
-          npm install 
-         
-      
+          cd ./my/npm/project 
+          npm install
+          ls | grep package-lock
+          npm ci
+          
       - name: Connect to PostgreSQL
         # Runs a script that creates a PostgreSQL table, populates
         # the table with data, and then retrieves the data
