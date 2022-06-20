@@ -26,6 +26,6 @@ jobs:
           mysql --host mydb -uroot -ppassword -e "SHOW DATABASES"
       - name: Setup Runner Database
         run: >
-          mysql -uroot -h127.0.0.1 -proot -e 'CREATE DATABASE IF NOT EXISTS
+          mysql -uroot -h127.0.0.1:8080 -proot -e 'CREATE DATABASE IF NOT EXISTS
           db1;'
 
