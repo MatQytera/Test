@@ -42,6 +42,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm init
+          npm install
           npm ci
           
       - name: Connect to PostgreSQL
