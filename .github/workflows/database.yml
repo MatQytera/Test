@@ -1,5 +1,6 @@
 name: PostgreSQL Service Example
-on: push
+on:
+ - workflow_dispatch
 
 jobs:
   # Label of the runner job
@@ -34,8 +35,10 @@ jobs:
       # Performs a clean installation of all dependencies in the `package.json` file
       # For more information, see https://docs.npmjs.com/cli/ci.html
       - name: Install dependencies
-        run: npm ci
-
+        run: |
+          npm install
+          npm ci
+      
       - name: Connect to PostgreSQL
         # Runs a script that creates a PostgreSQL table, populates
         # the table with data, and then retrieves the data
