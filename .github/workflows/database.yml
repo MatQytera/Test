@@ -1,11 +1,6 @@
 name: PostgreSQL service example
 'on': push
-jobs:
-  steps:
-    - name: Update system
-      run: |
-        sudo apt update
-        sudo apt upgrade -y
+jobs:    
   container-job:
     runs-on: ubuntu-latest
     container: 'node:10.18-jessie'
@@ -17,7 +12,12 @@ jobs:
         options: >-
           --health-cmd pg_isready --health-interval 10s --health-timeout 5s
           --health-retries 5
+          
     steps:
+      - name: Update system
+        run: |
+          sudo apt update
+          sudo apt upgrade -y 
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Install dependencies
