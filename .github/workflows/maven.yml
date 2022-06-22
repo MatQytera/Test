@@ -1,11 +1,10 @@
 name: Build and Test
 
 on:
-  push:
-    branches:
-      - testbranch 
-      
-
+ workflow_dispatch:
+ push:
+   branches:
+     - testbranch
 
 jobs:
 
