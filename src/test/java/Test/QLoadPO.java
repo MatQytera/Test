@@ -30,7 +30,7 @@ public class AppTest
 
  public WebDriver driver; 
 
- public String baseUrl = "https://www.lambdatest.com/";  
+ public String baseUrl = "qload-api.eba-snwykjch.eu-central-1.elasticbeanstalk.com";  
 
  
 
