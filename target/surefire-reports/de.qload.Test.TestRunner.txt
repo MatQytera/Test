@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: de.qload.Test.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 3.824 s <<< FAILURE! - in de.qload.Test.TestRunner
+setup(de.qload.Test.TestRunner)  Time elapsed: 3.632 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 96
+Current browser version is 101.0.4951.67 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'QYTERA124', ip: '192.168.178.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at de.qload.Test.TestRunner.setup(TestRunner.java:20)
+
