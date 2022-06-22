@@ -13,7 +13,7 @@ import java.lang.Thread;
 public class QLoadPO 
 {
     public WebDriver driver;
-    public String baseUrl = "http://192.168.178.120:8081/app/index.html";
+    //public String baseUrl = "http://192.168.178.120:8081/app/index.html";
     public String baseUrl = "qload-api.eba-snwykjch.eu-central-1.elasticbeanstalk.com";
 
     public static final By emailaddressefield = By.xpath("//input[@id='exampleInputEmail1']");
