@@ -17,5 +17,7 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn compile exec:java
+      run: | 
+        mvn clean install
+        mvn compile exec:java
       
